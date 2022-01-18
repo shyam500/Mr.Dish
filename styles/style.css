@@ -35,13 +35,19 @@ main{
 
 .inpbox{
     margin: 1.2rem 0rem;
-    height: 8vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #textinp{
     padding: 0.6rem;
-    width: 70vh;
+    width: 70vw;
     font-size: 1rem;
+    margin-right: 0.3rem;
 }
 
 #searchbtn{
@@ -92,9 +98,10 @@ footer p{
 }
 
 .boxImg{
-    width: 60%;
-    height: 45vh;
+    width: 70%;
+    height: 450px;
     object-fit: cover;
+    object-position: center;
     display: block;
     margin: 1rem auto;
 }
@@ -105,3 +112,12 @@ footer p{
     padding: 0.2rem;
 }
 
+#resHead{
+    color: var(--text_col);
+}
+
+@media screen and (max-width:425px) {
+    .boxImg{
+        width: 85%;
+    }
+}
