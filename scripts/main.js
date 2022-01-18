@@ -27,8 +27,8 @@ function createFunc(item) {
     <section class="box" id=${item.idMeal}>
         <h2 class='boxhead' >${item.strMeal}</h2>
         <img src=${item.strMealThumb} alt=${item.strMeal} class='boxImg'>
+        <p>INSTRUCTIONS </p>
         <p class="boxPara">${item.strInstructions}</p>
-        <hr>
 </section>
 `;
 };

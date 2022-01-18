@@ -11,7 +11,6 @@
 
 #container{
     min-height: 100vh;
-    border: 1px solid red;
 }
 
 header,footer{
@@ -50,6 +49,7 @@ main{
     transition: 0.3s linear;
     border: 1px solid var(--theme_col);
     border-radius: 0.2rem;
+    outline: none;
 }
 
 #searchbtn:hover{
@@ -80,21 +80,28 @@ footer p{
     border-radius: 10px;
     border: 1px solid var(--text_col);
     padding: 1rem 0.5rem;
+    position: relative;
+    margin: 1rem 0rem;
 }
 
 .boxhead{
     text-align: center;
     color: var(--text_col);
-    font: normal normal 1.1rem 'poppins';
+    font: normal normal 1.6rem 'poppins';
+    margin: 0.4rem 0rem;
 }
 
 .boxImg{
-    height: 100%;
+    width: 60%;
+    height: 45vh;
     object-fit: cover;
+    display: block;
+    margin: 1rem auto;
 }
 
-.boxPara{
+.boxPara,p{
     word-break: break-all;
     color: var(--text_col);
+    padding: 0.2rem;
 }
 
