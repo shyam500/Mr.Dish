@@ -6,6 +6,7 @@ const textInp = document.querySelector('#textinp'),
 btn.addEventListener('click', () => {
     if (textInp.value !== '') {
         inpFunc(textInp.value);
+        textInp.value = '';
         result.innerHTML = '';
     } else alert('Enter a dish to search');
 });
@@ -21,13 +22,12 @@ async function inpFunc(text) {
     }
 };
 
-
 function createFunc(item) {
     result.innerHTML += `
     <section class="box" id=${item.idMeal}>
         <h2 class='boxhead' >${item.strMeal}</h2>
         <img src=${item.strMealThumb} alt=${item.strMeal} class='boxImg'>
-        <p>${item.strInstructions}</p>
+        <p class="boxPara">${item.strInstructions}</p>
         <hr>
 </section>
 `;
