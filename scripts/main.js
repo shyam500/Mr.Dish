@@ -1,6 +1,7 @@
 const textInp = document.querySelector('#textinp'),
     btn = document.querySelector('#searchbtn'),
-    result = document.querySelector('#result');
+    result = document.querySelector('#result'),
+    favItems = document.querySelector('#fav');
 
 btn.addEventListener('click', () => {
     if (textInp.value !== '') {
@@ -20,14 +21,14 @@ async function inpFunc(text) {
     }
 };
 
+
 function createFunc(item) {
     result.innerHTML += `
     <section class="box" id=${item.idMeal}>
-    <h2 class='boxhead' >${item.strMeal}</h2>
-    <img src=${item.strMealThumb} alt=${item.strMeal}>
-    <i>${item.idMeal}</i>
-    <hr>
+        <h2 class='boxhead' >${item.strMeal}</h2>
+        <img src=${item.strMealThumb} alt=${item.strMeal} class='boxImg'>
+        <p>${item.strInstructions}</p>
+        <hr>
 </section>
 `;
 };
-
