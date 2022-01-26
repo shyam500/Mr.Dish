@@ -20,7 +20,9 @@ async function inpFunc(text) {
             resHead.textContent = `Showing results for ${text}`;
             data.meals.forEach(i => createFunc(i));
         }
-        else alert('Sorry No Dish Found');
+        else {
+            resHead.textContent = `No results found for ${text}`;
+        }
     } catch (err) {
         alert('Network Error,Check your connection');
     }
